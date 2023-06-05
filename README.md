@@ -4,10 +4,10 @@
   <!-- ![Name](urlToShieldHere)(urlToGithubHere) -->
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Contributors](https://img.shields.io/github/contributors/404pandas/pooh-weather-dashboard.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/pooh-weather-dashboard/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/404pandas/pooh-weather-dashboard.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/pooh-weather-dashboard/network/members)
-[![Stargazers](https://img.shields.io/github/stars/404pandas/pooh-weather-dashboard.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/pooh-weather-dashboard/stargazers)
-[![Issues](https://img.shields.io/github/issues/404pandas/pooh-weather-dashboard.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/pooh-weather-dashboard/issues)
+[![Contributors](https://img.shields.io/github/contributors/404pandas/all-animal-r-r.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/all-animal-r-r/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/404pandas/all-animal-r-r.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/all-animal-r-r/network/members)
+[![Stargazers](https://img.shields.io/github/stars/404pandas/all-animal-r-r.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/all-animal-r-r/stargazers)
+[![Issues](https://img.shields.io/github/issues/404pandas/all-animal-r-r.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/all-animal-r-r/issues)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=appveyor&logo=linkedin&colorB=555)](https://linkedin.com/in/404pandas)
 
 </div>
@@ -15,22 +15,22 @@
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/404pandas/pooh-weather-dashboard">
-    <img src="./assets/images/coded-logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/404pandas/all-animal-r-r">
+    <img src="./client/src/assets/images/aarr.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Pooh Weather Dashboard</h3>
+<h3 align="center">All Animal Rehab & Release</h3>
 
   <p align="center">
-Weather Dashboard using newly open source Pooh drawings    <br />
-    <a href="https://github.com/404pandas/pooh-weather-dashboard"><strong>Explore the docs »</strong></a>
+Website for my wildlife rescue.    <br />
+    <a href="https://github.com/404pandas/all-animal-r-r"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/404pandas/pooh-weather-dashboard">View Demo(Broken)</a>
+    <a href="https://github.com/404pandas/all-animal-r-r">View Demo(Broken)</a>
     ·
-    <a href="https://github.com/404pandas/pooh-weather-dashboard/issues">Report Bug</a>
+    <a href="https://github.com/404pandas/all-animal-r-r/issues">Report Bug</a>
     ·
-    <a href="https://github.com/404pandas/pooh-weather-dashboard/issues">Request Feature</a>
+    <a href="https://github.com/404pandas/all-animal-r-r/issues">Request Feature</a>
   </p>
 </div>
 
@@ -72,11 +72,10 @@ It also makes use of packages dayjs and jquery and gsap
 
 ### Built With
 
-<!--  Dayjs, gsap, jquery, materialize, javascript, css, html, node.js npm vs code -->
+<!--  gsap, mui, javascript, css, html, node.js react apollo graphql mongodb stripe jwt npm vs code -->
 
 <div align="center">
 
-[![Day.js](https://img.shields.io/badge/Package-Dayjs-ff0000?style=plastic&logo=npm&logoWidth=10)](https://day.js.org/)
 [![GSAP](https://img.shields.io/badge/Package-GSAP-ff8000?style=plastic&logo=greensock&logoWidth=10)](https://https://greensock.com/gsap/)
 [![jQuery](https://img.shields.io/badge/Framework-jQuery-ffff00?style=plastic&logo=jQuery&logoWidth=10)](hhttps://api.jquery.com/)
 [![Materialize](https://img.shields.io/badge/Framework-Materialize-80ff00?style=plastic&logo=#757575&logoWidth=10)](https://materializecss.com/)
@@ -97,7 +96,7 @@ Once completely built, this application will function as a deployed app on Netli
 ### Installation
 
 1. Clone the repo
-   git clone https://github.com/404pandas/pooh-weather-dashboard.git
+   git clone https://github.com/404pandas/all-animal-r-r.git
 
 <!-- USAGE EXAMPLES -->
 
@@ -109,11 +108,14 @@ Once the app is functional, screenshots will be added in this section.
 
 ## Roadmap
 
-- [ ] Pictures by weather
-- [ ] Animations by weather
-- [ ] Different themes
+- [ ] Folder Structure
+- [ ] Routing
+- [ ] Styling
+- [ ] User Auth (required with Stripe)
+- [ ] Stripe integration
+- [ ] Contact form w/ express mongo backend? might only be possible with php
 
-See the [open issues](https://github.com/404pandas/pooh-weather-dashboard/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/404pandas/all-animal-r-r/issues) for a full list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -144,7 +146,7 @@ See LICENSE.txt for more information.
 
 Mary Elenius - mary.panda.jackson@gmail.com
 
-Project Link: [https://github.com/404pandas/pooh-weather-dashboard](https://github.com/404pandas/pooh-weather-dashboard)
+Project Link: [https://allanimalrr.netlify.app](https://allanimalrr.netlify.app)
 
 <!-- ACKNOWLEDGMENTS -->
 
