@@ -153,3 +153,6 @@ Project Link: [https://allanimalrr.netlify.app](https://allanimalrr.netlify.app)
 ## Acknowledgments
 
 I would like to give a big shoutout to my partner in crime and daughter, Yennefer! Every day she proves she is small yet mighty!
+
+The pawprint loader was created by Kylojen at the following codepen.
+https://codepen.io/kylojen/pen/VxXXNm
