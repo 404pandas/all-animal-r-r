@@ -21,6 +21,9 @@ import Projects from "./pages/Projects";
 import Signup from "./pages/Signup";
 import Success from "./pages/Success";
 
+// Components
+import Header from "./components/Header";
+
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -46,7 +49,7 @@ function App() {
       <Router>
         <div>
           <Provider store={store}>
-            {/* todo- build out header */}
+            <Header />
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />

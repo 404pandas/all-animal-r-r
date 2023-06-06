@@ -10,6 +10,7 @@ import {
   TOGGLE_CART,
 } from "./actions";
 
+// Notice we moved the initial state object from our CarComponent to the reducer itself
 const initialState = {
   products: [],
   categories: [],
@@ -18,6 +19,7 @@ const initialState = {
   cartOpen: false,
 };
 
+// Here we pass a default value of initalState if none is provided
 export const reducers = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
