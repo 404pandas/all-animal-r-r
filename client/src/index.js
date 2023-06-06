@@ -7,8 +7,7 @@ import "../src/assets/css/style.css";
 
 import App from "./App";
 
-// todo- build out service worker and uncomment
-// import * as serviceWorker from './serviceWorker'
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,5 +16,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-// todo- build out service woroker and uncomment
-// serviceWorker.register();
+serviceWorker.register();

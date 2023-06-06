@@ -13,6 +13,7 @@ import store from "./utils/store";
 // Pages
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Detail from "./pages/Detail";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
@@ -54,6 +55,7 @@ function App() {
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />
               <Route path='/contact' element={<Contact />} />
+              <Route path='/detail' element={<Detail />} />
               <Route path='/login' element={<Login />} />
               <Route path='/*' element={<NoMatch />} />
               <Route path='/orderHistory' element={<OrderHistory />} />

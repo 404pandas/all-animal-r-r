@@ -3,68 +3,68 @@ import React from "react";
 function PawprintSpinner() {
   return (
     <>
-      <div class='paw-print-1'>
-        <div class='pad large'></div>
-        <div class='pad small-1'></div>
-        <div class='pad small-2'></div>
-        <div class='pad small-3'></div>
-        <div class='pad small-4'></div>
+      <div className='paw-print-1'>
+        <div className='pad large'></div>
+        <div className='pad small-1'></div>
+        <div className='pad small-2'></div>
+        <div className='pad small-3'></div>
+        <div className='pad small-4'></div>
       </div>
 
-      <div class='paw-print-2'>
-        <div class='pad large'></div>
-        <div class='pad small-1'></div>
-        <div class='pad small-2'></div>
-        <div class='pad small-3'></div>
-        <div class='pad small-4'></div>
+      <div className='paw-print-2'>
+        <div className='pad large'></div>
+        <div className='pad small-1'></div>
+        <div className='pad small-2'></div>
+        <div className='pad small-3'></div>
+        <div className='pad small-4'></div>
       </div>
 
-      <div class='paw-print-3'>
-        <div class='pad large'></div>
-        <div class='pad small-1'></div>
-        <div class='pad small-2'></div>
-        <div class='pad small-3'></div>
-        <div class='pad small-4'></div>
+      <div className='paw-print-3'>
+        <div className='pad large'></div>
+        <div className='pad small-1'></div>
+        <div className='pad small-2'></div>
+        <div className='pad small-3'></div>
+        <div className='pad small-4'></div>
       </div>
 
-      <div class='paw-print-4'>
-        <div class='pad large'></div>
-        <div class='pad small-1'></div>
-        <div class='pad small-2'></div>
-        <div class='pad small-3'></div>
-        <div class='pad small-4'></div>
+      <div className='paw-print-4'>
+        <div className='pad large'></div>
+        <div className='pad small-1'></div>
+        <div className='pad small-2'></div>
+        <div className='pad small-3'></div>
+        <div className='pad small-4'></div>
       </div>
 
-      <div class='paw-print-5'>
-        <div class='pad large'></div>
-        <div class='pad small-1'></div>
-        <div class='pad small-2'></div>
-        <div class='pad small-3'></div>
-        <div class='pad small-4'></div>
+      <div className='paw-print-5'>
+        <div className='pad large'></div>
+        <div className='pad small-1'></div>
+        <div className='pad small-2'></div>
+        <div className='pad small-3'></div>
+        <div className='pad small-4'></div>
       </div>
 
-      <div class='paw-print-6'>
-        <div class='pad large'></div>
-        <div class='pad small-1'></div>
-        <div class='pad small-2'></div>
-        <div class='pad small-3'></div>
-        <div class='pad small-4'></div>
+      <div className='paw-print-6'>
+        <div className='pad large'></div>
+        <div className='pad small-1'></div>
+        <div className='pad small-2'></div>
+        <div className='pad small-3'></div>
+        <div className='pad small-4'></div>
       </div>
 
-      <div class='paw-print-7'>
-        <div class='pad large'></div>
-        <div class='pad small-1'></div>
-        <div class='pad small-2'></div>
-        <div class='pad small-3'></div>
-        <div class='pad small-4'></div>
+      <div className='paw-print-7'>
+        <div className='pad large'></div>
+        <div className='pad small-1'></div>
+        <div className='pad small-2'></div>
+        <div className='pad small-3'></div>
+        <div className='pad small-4'></div>
       </div>
 
-      <div class='paw-print-8'>
-        <div class='pad large'></div>
-        <div class='pad small-1'></div>
-        <div class='pad small-2'></div>
-        <div class='pad small-3'></div>
-        <div class='pad small-4'></div>
+      <div className='paw-print-8'>
+        <div className='pad large'></div>
+        <div className='pad small-1'></div>
+        <div className='pad small-2'></div>
+        <div className='pad small-3'></div>
+        <div className='pad small-4'></div>
       </div>
     </>
   );
