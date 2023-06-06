@@ -4,6 +4,8 @@ const { User, Product, Category, Order } = require("../models");
 // todo- add auth util
 
 // todo- add stripe w/ token
+import env from "react-dotenv";
+const stripe = require("stripe")(env.STRIPE_SECRET_KEY);
 
 const resolvers = {
   Query: {
