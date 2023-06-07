@@ -18,18 +18,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Serve up static assets
-app.use(
-  "/images",
-  express.static(path.join(__dirname, "../client/src/assets/images"))
-);
+app.use("/images", express.static(path.join(__dirname, "../client/images")));
 
-// todo- change NODE_ENV to prod for deployment
-if (process.env.NODE_ENV === "development") {
-  app.use(express.static(path.join(__dirname, "../client")));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
 }
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/public/index.html"));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 // Create a new instance of an Apollo server with the GraphQL schema

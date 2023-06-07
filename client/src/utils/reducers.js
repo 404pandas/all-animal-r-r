@@ -1,3 +1,4 @@
+import { useReducer } from "react";
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
@@ -94,4 +95,6 @@ export const reducers = (state = initialState, action) => {
   }
 };
 
-export default reducers;
+export function useProductReducer(initialState) {
+  return useReducer(reducers, initialState);
+}

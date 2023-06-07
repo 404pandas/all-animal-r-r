@@ -1,14 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
-import { Provider } from "react-redux";
-import store from "./utils/store";
+import { StoreProvider } from "./utils/GlobalState";
 
 // Pages
 import About from "./pages/About";
@@ -25,49 +17,28 @@ import Success from "./pages/Success";
 // Components
 import Header from "./components/Header";
 
-const httpLink = createHttpLink({
-  uri: "/graphql",
-});
-
-const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem("id_token");
-  return {
-    headers: {
-      ...headers,
-      authorization: token ? `Bearer ${token}` : "",
-    },
-  };
-});
-
-const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
-});
-
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <Router>
-        <div>
-          <Provider store={store}>
-            <Header />
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/detail' element={<Detail />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/*' element={<NoMatch />} />
-              <Route path='/orderHistory' element={<OrderHistory />} />
-              <Route path='/projects' element={<Projects />} />
-              <Route path='/signup' element={<Signup />} />
-              <Route path='/success' element={<Success />} />
-            </Routes>
-            {/* todo- build out footer */}
-          </Provider>
-        </div>
-      </Router>
-    </ApolloProvider>
+    <Router>
+      <div>
+        <StoreProvider>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/detail' element={<Detail />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/*' element={<NoMatch />} />
+            <Route path='/orderHistory' element={<OrderHistory />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/success' element={<Success />} />
+          </Routes>
+          {/* todo- build out footer */}
+        </StoreProvider>
+      </div>
+    </Router>
   );
 }
 
