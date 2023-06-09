@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useMutation } from "@apollo/client";
-import { ADD_ORDER } from "../utils/mutations";
-import { idbPromise } from "../utils/helpers";
+import { ADD_ORDER } from "../utils/mutations.js";
+import { idbPromise } from "../utils/helpers.js";
 
 function Success() {
   const [addOrder] = useMutation(ADD_ORDER);

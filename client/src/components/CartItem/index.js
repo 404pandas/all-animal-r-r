@@ -1,9 +1,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
-import { idbPromise } from "../../utils/helpers";
+import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions.js";
+import { idbPromise } from "../../utils/helpers.js";
 
-const CartItem = ({ item }) => {
+export default function CartItem({ item }) {
   const dispatch = useDispatch();
 
   const removeFromCart = (item) => {
@@ -60,6 +60,4 @@ const CartItem = ({ item }) => {
       </div>
     </div>
   );
-};
-
-export default CartItem;
+}

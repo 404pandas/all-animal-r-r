@@ -1,5 +1,5 @@
 {
-  "name": "all-animal-r-r-server",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,16 +7,13 @@
     "start": "node server.js",
     "seed": "node config/seeds.js"
   },
-  "keywords": [],
-  "author": "Mary Elenius",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^3.12.0",
     "bcrypt": "^5.1.0",
     "express": "^4.18.2",
-    "graphql": "^16.6.0",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.2.2",
-    "stripe": "^12.8.0"
+    "mongoose": "^7.2.2"
   }
 }

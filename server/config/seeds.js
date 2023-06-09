@@ -1,5 +1,5 @@
-const db = require("./connection");
-const { User, Product, Category } = require("../models");
+const db = require("./connection.js");
+const { User, Product, Category } = require("../models.js");
 
 db.once("open", async () => {
   await Category.deleteMany();
@@ -121,10 +121,10 @@ db.once("open", async () => {
     {
       name: "Adoption",
       description:
-        "This donation is intentionally left at $0.00. It only serves as a paper trail for adopters to possess when they adopt an animal in our care.",
+        "This donation only serves as a paper trail for adopters to possess when they adopt an animal in our care.",
       image: "canned-coffee.jpg",
       category: categories[2]._id,
-      price: 0,
+      price: 10.0,
     },
 
     {

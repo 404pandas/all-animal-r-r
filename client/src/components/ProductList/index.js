@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import ProductItem from "../ProductItem";
+import ProductItem from "../ProductItem/index.js";
 import { useDispatch, useSelector } from "react-redux";
-import { UPDATE_PRODUCTS } from "../../utils/actions";
+import { UPDATE_PRODUCTS } from "../../utils/actions.js";
 import { useQuery } from "@apollo/client";
-import { QUERY_PRODUCTS } from "../../utils/queries";
-import { idbPromise } from "../../utils/helpers";
-import PawprintSpinner from "../Spinner/index.";
+import { QUERY_PRODUCTS } from "../../utils/queries.js";
+import { idbPromise } from "../../utils/helpers.js";
+import PawprintSpinner from "../Spinner/index.js";
 
 function ProductList() {
   const dispatch = useDispatch();

@@ -1,4 +1,3 @@
-import { useReducer } from "react";
 import {
   UPDATE_PRODUCTS,
   ADD_TO_CART,
@@ -9,9 +8,8 @@ import {
   UPDATE_CURRENT_CATEGORY,
   CLEAR_CART,
   TOGGLE_CART,
-} from "./actions";
+} from "./actions.js";
 
-// Notice we moved the initial state object from our CarComponent to the reducer itself
 const initialState = {
   products: [],
   categories: [],
@@ -20,7 +18,6 @@ const initialState = {
   cartOpen: false,
 };
 
-// Here we pass a default value of initalState if none is provided
 export const reducers = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_PRODUCTS:
@@ -95,6 +92,4 @@ export const reducers = (state = initialState, action) => {
   }
 };
 
-export function useProductReducer(initialState) {
-  return useReducer(reducers, initialState);
-}
+export default reducers;

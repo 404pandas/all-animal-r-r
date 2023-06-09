@@ -3,16 +3,16 @@ import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { useDispatch, useSelector } from "react-redux";
 
-import Cart from "../components/Cart";
-import PawprintSpinner from "../components/Spinner/index.";
+import Cart from "../components/Cart/index.js";
+import PawprintSpinner from "../components/Spinner/index.js";
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
   ADD_TO_CART,
   UPDATE_PRODUCTS,
-} from "../utils/actions";
-import { QUERY_PRODUCTS } from "../utils/queries";
-import { idbPromise } from "../utils/helpers";
+} from "../utils/actions.js";
+import { QUERY_PRODUCTS } from "../utils/queries.js";
+import { idbPromise } from "../utils/helpers.js";
 
 function Detail() {
   const dispatch = useDispatch();

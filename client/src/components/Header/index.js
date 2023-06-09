@@ -1,20 +1,23 @@
 import * as React from "react";
-import Auth from "../../utils/auth";
+import Auth from "../../utils/auth.js";
 import { Link } from "react-router-dom";
 
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+// MUI Components
+import AppBar from "@mui/material/AppBar/index.js";
+import Box from "@mui/material/Box/index.js";
+import Toolbar from "@mui/material/Toolbar/index.js";
+import IconButton from "@mui/material/IconButton/index.js";
+import Typography from "@mui/material/Typography/index.js";
+import Menu from "@mui/material/Menu/index.js";
+import Container from "@mui/material/Container/index.js";
+import Avatar from "@mui/material/Avatar/index.js";
+import Button from "@mui/material/Button/index.js";
+import Tooltip from "@mui/material/Tooltip/index.js";
+import MenuItem from "@mui/material/MenuItem/index.js";
+
+// MUI Icons
+// import Logo from "../../assets/images/aarr.png";
+import MenuIcon from "@mui/icons-material/Menu.js";
 
 const pages = ["About", "Contact", "Home", "Projects"];
 const settings = ["Profile", "OrderHistory", "Login", "Logout", "Signup"];
@@ -71,7 +74,7 @@ function Header() {
       <AppBar position='static'>
         <Container maxWidth='xl'>
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+            {/* <Logo sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
             <Typography
               variant='h6'
               noWrap
@@ -126,7 +129,7 @@ function Header() {
                 ))}
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+            {/* <Logo sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
             <Typography
               variant='h5'
               noWrap

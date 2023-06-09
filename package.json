@@ -1,5 +1,5 @@
 {
-  "name": "all-animal-r-r",
+  "name": "new-attempt",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -10,14 +10,9 @@
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
-  "keywords": [],
-  "author": "Mary Elenius",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0"
-  },
-  "dependencies": {
-    "@mui/icons-material": "^5.11.16",
-    "react": "^18.2.0"
+    "concurrently": "^8.2.0"
   }
 }
