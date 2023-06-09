@@ -19,8 +19,13 @@ import MenuItem from "@mui/material/MenuItem/index.js";
 // import Logo from "../../assets/images/aarr.png";
 import MenuIcon from "@mui/icons-material/Menu.js";
 
-const pages = ["About", "Contact", "Home", "Projects"];
-const settings = ["Profile", "OrderHistory", "Login", "Logout", "Signup"];
+const pages = ["About", "Contact", "Home", "Projects", "Donate"];
+
+const pagesHref = ["/about", "/contact", "/", "/projects", "/donate"];
+
+const settings = ["Profile", "Donation History", "Login", "Signup"];
+
+const settingsHref = ["/profile", "/donation-history", "/login", "/signup"];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -124,7 +129,9 @@ function Header() {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign='center'>{page}</Typography>
+                    <Link to={pagesHref}>
+                      <Typography textAlign='center'>{page}</Typography>
+                    </Link>
                   </MenuItem>
                 ))}
               </Menu>
@@ -184,7 +191,9 @@ function Header() {
               >
                 {settings.map((setting) => (
                   <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign='center'>{setting}</Typography>
+                    <Link to={settingsHref}>
+                      <Typography textAlign='center'>{setting}</Typography>
+                    </Link>
                   </MenuItem>
                 ))}
               </Menu>

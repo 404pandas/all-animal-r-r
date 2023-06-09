@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_USER } from "../utils/queries.js";
 
-function OrderHistory() {
+function DonateHistory() {
   const { data } = useQuery(QUERY_USER);
   let user;
 
@@ -49,4 +49,4 @@ function OrderHistory() {
   );
 }
 
-export default OrderHistory;
+export default DonateHistory;

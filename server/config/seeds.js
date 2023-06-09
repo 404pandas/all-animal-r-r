@@ -1,5 +1,5 @@
 const db = require("./connection.js");
-const { User, Product, Category } = require("../models.js");
+const { User, Product, Category } = require("../models");
 
 db.once("open", async () => {
   await Category.deleteMany();
@@ -146,6 +146,7 @@ db.once("open", async () => {
     lastName: "Elenius",
     email: "allanimalrr@gmail.com",
     password: "testtest",
+    username: "AARR",
     orders: [
       {
         products: [products[0]._id, products[0]._id, products[1]._id],
@@ -158,6 +159,7 @@ db.once("open", async () => {
     lastName: "Elenius",
     email: "exemplary.templar@gmail.com",
     password: "testtest",
+    username: "weissengheist",
   });
 
   console.log("Users have been seeded!");

@@ -13,11 +13,11 @@ import store from "./utils/store.js";
 // Pages
 import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
-import Detail from "./pages/Detail.js";
+import Donate from "./pages/Donate.js";
 import Home from "./pages/Home.js";
 import Login from "./pages/Login.js";
 import NoMatch from "./pages/NoMatch.js";
-import OrderHistory from "./pages/OrderHistory.js";
+import DonateHistory from "./pages/DonateHistory.js";
 import Projects from "./pages/Projects.js";
 import Signup from "./pages/Signup.js";
 import Success from "./pages/Success.js";
@@ -60,8 +60,8 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/projects' element={<Projects />} />
             <Route path='/about' element={<About />} />
-            <Route path='/donate' element={<Detail />} />
-            <Route path='/order-history' element={<OrderHistory />} />
+            <Route path='/donate' element={<Donate />} />
+            <Route path='/donate-history' element={<DonateHistory />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/login' element={<Login />} />
             <Route path='/success' element={<Success />} />
