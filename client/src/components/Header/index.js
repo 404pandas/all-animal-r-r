@@ -49,7 +49,7 @@ function Header() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <>
+        <div className='ifelse-header'>
           <MenuItem key='OrderHistory' onClick={handleCloseNavMenu}>
             <Link to='/orderHistory'>Order History</Link>
           </MenuItem>
@@ -58,18 +58,18 @@ function Header() {
           <MenuItem key='Logout' onClick={() => Auth.logout()}>
             Logout
           </MenuItem>
-        </>
+        </div>
       );
     } else {
       return (
-        <>
+        <div className='ifelse-header'>
           <MenuItem key='Signup' onClick={handleCloseNavMenu}>
             <Link to='/signup'>Signup</Link>
           </MenuItem>
           <MenuItem key='Login' onClick={handleCloseNavMenu}>
             <Link to='/login'>Login</Link>
           </MenuItem>
-        </>
+        </div>
       );
     }
   }

@@ -7,6 +7,9 @@ import { QUERY_PRODUCTS } from "../../utils/queries.js";
 import { idbPromise } from "../../utils/helpers.js";
 import PawprintSpinner from "../Spinner/index.js";
 
+// MUI imports
+import Typography from "@mui/material/Typography";
+
 function ProductList() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
@@ -45,10 +48,10 @@ function ProductList() {
   }
 
   return (
-    <div className='my-2'>
-      <h2>Our Products:</h2>
+    <div className='my-2' id='our-products'>
+      <Typography variant='h2'>Our Products:</Typography>
       {state.products.length ? (
-        <div className='flex-row'>
+        <div className='flex-column'>
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}

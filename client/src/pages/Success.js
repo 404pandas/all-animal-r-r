@@ -3,6 +3,9 @@ import { useMutation } from "@apollo/client";
 import { ADD_ORDER } from "../utils/mutations.js";
 import { idbPromise } from "../utils/helpers.js";
 
+// MUI imports
+import Typography from "@mui/material/Typography";
+
 function Success() {
   const [addOrder] = useMutation(ADD_ORDER);
 
@@ -30,9 +33,11 @@ function Success() {
 
   return (
     <div>
-      <h1>Success!</h1>
-      <h2>Thank you for your purchase!</h2>
-      <h2>You will now be redirected to the home page</h2>
+      <Typography variaant='h1'>Success!</Typography>
+      <Typography variant='h2'>Thank you for your purchase!</Typography>
+      <Typography variable='h2'>
+        You will now be redirected to the home page
+      </Typography>
     </div>
   );
 }

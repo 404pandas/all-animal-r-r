@@ -6,10 +6,12 @@ import Cart from "../components/Cart/index.js";
 
 export default function Donate() {
   return (
-    <>
+    <div id='donation-container'>
       <CategoryMenu />
-      <ProductList />
+      <div id='product-list'>
+        <ProductList />
+      </div>
       <Cart />
-    </>
+    </div>
   );
 }

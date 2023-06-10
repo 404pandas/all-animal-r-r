@@ -519,3 +519,105 @@ div p {
 .hidden {
   display: none !important;
 }
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+.small {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.my-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem !important;
+  width: 90% !important;
+}
+
+.input-fill {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100% !important;
+}
+
+.flex-row-end {
+  flex-direction: row;
+  justify-content: end;
+}
+
+.button-margin {
+  margin-top: 1rem;
+}
+
+.ifelse-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#projectCardContainer {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+#cart-list {
+  display: flex;
+  flex-direction: column;
+}
+
+#cart-details {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: space-around;
+}
+
+#cart-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+#currentProductImage {
+  display: flex;
+  align-self: center;
+}
+
+#image404page {
+  width: 50%;
+  border-radius: 80px;
+}
+
+#noMatchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+#donation-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#product-list {
+  display: flex;
+  flex-direction: column;
+}
+
+#our-products {
+  display: flex;
+  flex-direction: column;
+}

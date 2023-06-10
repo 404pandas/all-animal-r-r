@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 import { LOGIN_USER } from "../utils/mutations.js";
 import Auth from "../utils/auth.js";
 
+// MUI imports
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+
 function Login(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN_USER);
@@ -30,41 +35,44 @@ function Login(props) {
   };
 
   return (
-    <div className='container my-1'>
-      <Link to='/signup'>← Go to Signup</Link>
-
+    <Container>
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
-        <div className='flex-row space-between my-2'>
-          <label htmlFor='email'>Email address:</label>
-          <input
+        <div className='my-2 input-fill'>
+          <TextField
+            label='Email:'
             placeholder='youremail@test.com'
             name='email'
             type='email'
             id='email'
             onChange={handleChange}
-          />
+            className='input-fill'
+          ></TextField>
         </div>
-        <div className='flex-row space-between my-2'>
-          <label htmlFor='pwd'>Password:</label>
-          <input
+        <div className='my-2 input-fill'>
+          <TextField
+            label='Password:'
             placeholder='******'
             name='password'
             type='password'
             id='pwd'
             onChange={handleChange}
-          />
+            className='input-fill'
+          ></TextField>
         </div>
         {error ? (
           <div>
-            <p className='error-text'>The provided credentials are incorrect</p>
+            <Typography variant='body1' className='error-text'>
+              The provided credentials are incorrect
+            </Typography>
           </div>
         ) : null}
-        <div className='flex-row flex-end'>
-          <button type='submit'>Submit</button>
-        </div>
+
+        <button className='flex-row-end button-margin' type='submit'>
+          Submit
+        </button>
       </form>
-    </div>
+    </Container>
   );
 }
 

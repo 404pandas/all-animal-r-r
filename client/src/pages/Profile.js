@@ -14,6 +14,9 @@ import {
 import { QUERY_PRODUCTS } from "../utils/queries.js";
 import { idbPromise } from "../utils/helpers.js";
 
+// MUI imports
+import Typography from "@mui/material/Typography";
+
 function Detail() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
@@ -85,27 +88,32 @@ function Detail() {
   return (
     <>
       {currentProduct && cart ? (
-        <div className='container my-1'>
-          <Link to='/'>← Back to Products</Link>
+        <div className='container my-1' id='cart-list'>
+          <Link to='/donate'>← Back to Donation Options</Link>
 
-          <h2>{currentProduct.name}</h2>
+          <Typography variant='h2'>{currentProduct.name}</Typography>
 
-          <p>{currentProduct.description}</p>
+          <Typography variant='body1'>{currentProduct.description}</Typography>
 
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{" "}
-            <button onClick={addToCart}>Add to Cart</button>
-            <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-            </button>
-          </p>
+          <Typography variant='body1' id='cart-details'>
+            <div>
+              <strong>Price: </strong>${currentProduct.price}
+            </div>
+            <div id='cart-buttons'>
+              <button onClick={addToCart}>Add to Cart</button>
+              <button
+                disabled={!cart.find((p) => p._id === currentProduct._id)}
+                onClick={removeFromCart}
+              >
+                Remove from Cart
+              </button>
+            </div>
+          </Typography>
 
           <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
+            id='currentProductImage'
           />
         </div>
       ) : null}
