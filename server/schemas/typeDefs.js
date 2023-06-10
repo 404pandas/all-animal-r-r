@@ -40,6 +40,17 @@ const typeDefs = gql`
     user: User
   }
 
+  type Contact {
+    _id: ID
+    fname: String!
+    email: String!
+    telephone: String!
+    city: String!
+    message: String!
+    sentConfirmation: Boolean
+    receivedEmail: Boolean
+  }
+
   type Query {
     categories: [Category]
     products(category: ID, name: String): [Product]
@@ -47,6 +58,7 @@ const typeDefs = gql`
     user: User
     order(_id: ID!): Order
     checkout(products: [ID]!): Checkout
+    contact(_id: ID!): Contact
   }
 
   type Mutation {

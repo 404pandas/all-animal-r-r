@@ -1,0 +1,12 @@
+#contact-input {
+  max-width: 90% !important;
+  min-width: 90% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+#contact-form {
+  width: 90% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: #000 !important;
+}

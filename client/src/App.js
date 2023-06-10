@@ -25,6 +25,7 @@ import Profile from "./pages/Profile.js";
 
 // Components
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -70,6 +71,7 @@ function App() {
             <Route path='*' element={<NoMatch />} />
             <Route path='/profile' element={<Profile />} />
           </Routes>
+          <Footer />
         </Provider>
       </Router>
     </ApolloProvider>

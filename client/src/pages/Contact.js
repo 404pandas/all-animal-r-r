@@ -1,6 +1,6 @@
-// todo- build this out
+import ContactForm from "../components/ContactForm";
 import React from "react";
 
 export default function Contact() {
-  return <div>Contact</div>;
+  return <ContactForm />;
 }

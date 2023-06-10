@@ -49,7 +49,7 @@ function ProductList() {
 
   return (
     <div className='my-2' id='our-products'>
-      <Typography variant='h2'>Our Products:</Typography>
+      <Typography variant='h4'>Our Products:</Typography>
       {state.products.length ? (
         <div className='flex-column'>
           {filterProducts().map((product) => (
@@ -64,7 +64,9 @@ function ProductList() {
           ))}
         </div>
       ) : (
-        <h3>You haven't added any products yet!</h3>
+        <Typography variant='h4'>
+          You haven't added any products yet!
+        </Typography>
       )}
       {loading ? <PawprintSpinner /> : null}
     </div>

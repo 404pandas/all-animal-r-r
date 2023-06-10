@@ -2,6 +2,9 @@ import * as React from "react";
 import Auth from "../../utils/auth.js";
 import { Link } from "react-router-dom";
 
+// local import
+import logo from "../../assets/images/aarr.png";
+
 // MUI Components
 import AppBar from "@mui/material/AppBar/index.js";
 import Box from "@mui/material/Box/index.js";
@@ -16,7 +19,6 @@ import Tooltip from "@mui/material/Tooltip/index.js";
 import MenuItem from "@mui/material/MenuItem/index.js";
 
 // MUI Icons
-// import Logo from "../../assets/images/aarr.png";
 import MenuIcon from "@mui/icons-material/Menu.js";
 
 const pages = ["About", "Contact", "Home", "Projects", "Donate"];
@@ -79,7 +81,6 @@ function Header() {
       <AppBar position='static'>
         <Container maxWidth='xl'>
           <Toolbar disableGutters>
-            {/* <Logo sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
             <Typography
               variant='h6'
               noWrap
@@ -95,9 +96,8 @@ function Header() {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              All Animal R&R
             </Typography>
-
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size='large'
@@ -106,6 +106,7 @@ function Header() {
                 aria-haspopup='true'
                 onClick={handleOpenNavMenu}
                 color='inherit'
+                id='menu-icon'
               >
                 <MenuIcon />
               </IconButton>
@@ -136,7 +137,7 @@ function Header() {
                 ))}
               </Menu>
             </Box>
-            {/* <Logo sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
+            <img src={logo} alt='aarr logo' id='logo' />{" "}
             <Typography
               variant='h5'
               noWrap
@@ -151,6 +152,7 @@ function Header() {
                 letterSpacing: ".3rem",
                 color: "inherit",
                 textDecoration: "none",
+                marginLeft: "1rem",
               }}
             >
               LOGO
@@ -166,7 +168,6 @@ function Header() {
                 </Button>
               ))}
             </Box>
-
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title='Open settings'>
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

@@ -605,6 +605,8 @@ h6 {
   flex-direction: column;
   align-items: center;
   margin-top: 5%;
+  background-color: white;
+  padding: 3%;
 }
 
 #donation-container {
@@ -620,4 +622,22 @@ h6 {
 #our-products {
   display: flex;
   flex-direction: column;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.contact-input {
+  min-width: 100% !important;
+  margin-top: 1rem !important;
+}
+#logo {
+  width: 3rem;
 }

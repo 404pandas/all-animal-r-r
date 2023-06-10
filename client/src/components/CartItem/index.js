@@ -3,6 +3,9 @@ import { useDispatch } from "react-redux";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions.js";
 import { idbPromise } from "../../utils/helpers.js";
 
+// MUI imports
+import TextField from "@mui/material/TextField";
+
 export default function CartItem({ item }) {
   const dispatch = useDispatch();
 
@@ -43,7 +46,7 @@ export default function CartItem({ item }) {
         </div>
         <div>
           <span>Qty:</span>
-          <input
+          <TextField
             type='number'
             placeholder='1'
             value={item.purchaseQuantity}

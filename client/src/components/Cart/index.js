@@ -9,6 +9,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions.js";
 import "./style.css";
 
+// MUI imports
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography/index.js";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 export default function Cart() {
@@ -63,10 +68,8 @@ export default function Cart() {
 
   if (!state.cartOpen) {
     return (
-      <div className='cart-closed' onClick={toggleCart}>
-        <span role='img' aria-label='trash'>
-          🛒
-        </span>
+      <div className='cart-closed' id='shopping-cart-icon' onClick={toggleCart}>
+        <ShoppingCartOutlinedIcon id='mui-icon' />
       </div>
     );
   }
@@ -76,7 +79,7 @@ export default function Cart() {
       <div className='close' onClick={toggleCart}>
         [close]
       </div>
-      <h2>Shopping Cart</h2>
+      <Typography variant='h3'>Shopping Cart</Typography>
       {state.cart.length ? (
         <div>
           {state.cart.map((item) => (
@@ -87,19 +90,19 @@ export default function Cart() {
             <strong>Total: ${calculateTotal()}</strong>
 
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <Button onClick={submitCheckout}>Checkout</Button>
             ) : (
               <span>(log in to check out)</span>
             )}
           </div>
         </div>
       ) : (
-        <h3>
+        <Typography variant='h4'>
           <span role='img' aria-label='shocked'>
             😱
           </span>
           You haven't added anything to your cart yet!
-        </h3>
+        </Typography>
       )}
     </div>
   );

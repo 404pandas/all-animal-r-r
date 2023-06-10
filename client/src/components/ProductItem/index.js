@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions.js";
 import { idbPromise, pluralize } from "../../utils/helpers.js";
 
+// MUI import
+import Button from "@mui/material/Button";
+
 function ProductItem(item) {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
@@ -45,7 +48,7 @@ function ProductItem(item) {
         </div>
         <span>${price}</span>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
+      <Button onClick={addToCart}>Add to cart</Button>
     </div>
   );
 }

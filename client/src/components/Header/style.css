@@ -2,3 +2,9 @@
 *              Mary Elenius AAR&R Header Stylesheet             *
 *                         06/05/2023                            *
 \* -----------------------------------------------------------  */
+
+#menu-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
