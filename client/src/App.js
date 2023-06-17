@@ -57,7 +57,6 @@ function App() {
       <Router>
         <Provider store={store}>
           <Header />
-
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/projects' element={<Projects />} />

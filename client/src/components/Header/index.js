@@ -1,6 +1,6 @@
 import * as React from "react";
 import Auth from "../../utils/auth.js";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // local import
 import logo from "../../assets/images/aarr.png";
@@ -32,6 +32,7 @@ const settingsHref = ["/profile", "/donation-history", "/login", "/signup"];
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const { pathname } = useLocation();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -47,6 +48,8 @@ function Header() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  console.log(navigation);
 
   function showNavigation() {
     if (Auth.loggedIn()) {
@@ -128,10 +131,15 @@ function Header() {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {pages.map((page) => (
+                {pages.map((page, i) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link to={pagesHref}>
-                      <Typography textAlign='center'>{page}</Typography>
+                    <Link to={pagesHref[i]}>
+                      <Typography
+                        textAlign='center'
+                        color={pagesHref[i] === pathname ? "black" : "pink"}
+                      >
+                        {page}
+                      </Typography>
                     </Link>
                   </MenuItem>
                 ))}
@@ -161,8 +169,14 @@ function Header() {
               {pages.map((page) => (
                 <Button
                   key={page}
+                  className={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{
+                    my: 2,
+                    color: "white",
+                    display: "block",
+                    ["&.Contact"]: { color: "black" },
+                  }}
                 >
                   {page}
                 </Button>
