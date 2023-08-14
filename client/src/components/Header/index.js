@@ -204,8 +204,8 @@ function Header() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                {settings.map((setting, indexOf) => (
+                  <MenuItem key={setting.indexOf} onClick={handleCloseUserMenu}>
                     <Link to={settingsHref}>
                       <Typography textAlign='center'>{setting}</Typography>
                     </Link>
