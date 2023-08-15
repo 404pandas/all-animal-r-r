@@ -17,6 +17,7 @@ export let pastProjectData = [
     title: "Past Projects",
     description:
       "We are a newly founded rescue and don't have any past projects.",
+    update: "",
     date: "06/01/2023",
   },
 ];
@@ -26,8 +27,9 @@ export let presentProjectData = [
     image: image2,
     title: "The Painter Clowder",
     description:
-      "This is a group of mousers that need either of the following: Flea and tick medicine, Spay or neuter, Vaccines, Microchips, Food Stations, Water Stations ",
-    date: "06/01/2023",
+      "This is a group of mousers that need either of the following: Flea and tick medicine, Spay or neuter, Vaccines, Microchips, Food Stations, Water Stations. Currently, thanks to donations from the community, 4 cats have had full flea and tick treatment.",
+    update: "",
+    date: "08/14/2023",
   },
   {
     id: 1,
@@ -35,6 +37,7 @@ export let presentProjectData = [
     title: "The Musician Clowder",
     description:
       "This is a group of mousers that need either of the following: Flea and tick medicine, Spay or neuter, Vaccines, Microchips, Food Stations, Water Stations",
+    update: "",
     date: "06/01/2023",
   },
 ];
@@ -45,6 +48,7 @@ export let futureProjectData = [
     title: "Future Project",
     description:
       "We currently don't have any other projects in the pipeline. To donate so that we may take on more projects, please visit the Donate page!",
+    update: "",
     date: "06/01/2023",
   },
 ];

@@ -14,20 +14,21 @@ const ProjectCard = ({ project }) => {
       <Card sx={{ maxWidth: 320 }} key={project.id} className='cardContent'>
         <CardMedia
           component='img'
-          alt='placeholder drawings of travelers at different locations that match color pallette'
+          alt='placeholder drawings of animals'
           height='140'
           image={project.image}
         />
-        <CardContent>
+        <CardContent id='details'>
           <Typography gutterBottom variant='h5' component='div'>
             {project.title}
           </Typography>
+          <Typography variant='body1'>{project.update}</Typography>
           <Typography variant='body2' color='text.secondary'>
             {project.description}
-          </Typography>
+          </Typography>{" "}
         </CardContent>
         <CardActions id='card-buttons'>
-          <Typography variant='body2'>Date: {project.date}</Typography>
+          <Typography variant='body2'>Date Updated: {project.date}</Typography>
         </CardActions>
       </Card>
     </div>

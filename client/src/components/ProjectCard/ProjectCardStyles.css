@@ -8,6 +8,10 @@
   align-self: center;
 }
 
+.cardContent {
+  margin-bottom: 10px;
+}
+
 #card-buttons {
   display: flex;
   justify-items: flex-end;
@@ -17,4 +21,9 @@
 .cardContainer {
   margin-left: 8px;
   margin-right: 8px;
+}
+
+#details {
+  display: flex;
+  flex-direction: column;
 }

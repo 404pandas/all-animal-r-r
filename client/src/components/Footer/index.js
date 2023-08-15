@@ -47,11 +47,6 @@ const Footer = () => {
           </div>
         </div>
         <div className='rightFooter'>
-          <h4>Adopt Me</h4>
-          <Typography variant='body1' id='footer-body1'>
-            I am a purebred Overwhelmed Homosapien looking for a place to call
-            home. If you are interested in hiring me, please contact me!
-          </Typography>
           <div className='socialIcons'>
             <AiOutlineLinkedin
               size={20}

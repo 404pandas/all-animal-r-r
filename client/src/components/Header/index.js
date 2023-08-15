@@ -29,6 +29,17 @@ const settings = ["Profile", "Donation History", "Login", "Signup"];
 
 const settingsHref = ["/profile", "/donation-history", "/login", "/signup"];
 
+const user = [
+  {
+    id: 0,
+    username: "404pandas",
+    email: "mary.panda.jackson@gmail.com",
+    firstName: "Mary",
+    lastName: "Elenius",
+    initials: "ME",
+  },
+];
+
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -163,29 +174,24 @@ function Header() {
                 marginLeft: "1rem",
               }}
             >
-              LOGO
+              AAR&R
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  className={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    my: 2,
-                    color: "white",
-                    display: "block",
-                    ["&.Contact"]: { color: "black" },
-                  }}
-                >
-                  {page}
-                </Button>
+              {pages.map((page, i) => (
+                <Link to={pagesHref[i]}>
+                  <Typography
+                    textAlign='center'
+                    color={pagesHref[i] === pathname ? "black" : "pink"}
+                  >
+                    {page}
+                  </Typography>
+                </Link>
               ))}
             </Box>
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title='Open settings'>
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt='Remy Sharp' src='/static/images/avatar/2.jpg' />
+                  <Avatar alt='Initials for user' src={user.initials} />
                 </IconButton>
               </Tooltip>
               <Menu
@@ -204,8 +210,8 @@ function Header() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting, indexOf) => (
-                  <MenuItem key={setting.indexOf} onClick={handleCloseUserMenu}>
+                {settings.map((setting) => (
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
                     <Link to={settingsHref}>
                       <Typography textAlign='center'>{setting}</Typography>
                     </Link>
