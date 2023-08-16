@@ -1,5 +1,6 @@
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
+const { ApolloServerPluginInlineTrace } = require("apollo-server-core");
 const path = require("path");
 const { authMiddleware } = require("./utils/auth.js");
 
@@ -12,6 +13,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: authMiddleware,
+  plugins: [ApolloServerPluginInlineTrace()],
 });
 
 app.use(express.urlencoded({ extended: false }));

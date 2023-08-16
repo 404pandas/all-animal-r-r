@@ -48,7 +48,7 @@ function CategoryMenu() {
 
   return (
     <div>
-      <Typography variant='h3'>Choose a Category:</Typography>
+      <Typography variant='h4'>Choose a Category:</Typography>
       {categories.map((item) => (
         <Button
           key={item._id}

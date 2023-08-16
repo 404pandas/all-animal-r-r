@@ -10,7 +10,7 @@ import Typography from "@mui/material/Typography";
 const NoMatch = () => {
   return (
     <div id='noMatchContainer'>
-      <img src={image404} id='image404page'></img>
+      <img alt='404 error' src={image404} id='image404page'></img>
       <Typography variant='h3'>404:</Typography>
       <Typography variant='h4'> Page Not Found</Typography>
     </div>

@@ -9,7 +9,7 @@ import PawprintSpinner from "../Spinner/index.js";
 
 // MUI imports
 import Typography from "@mui/material/Typography";
-
+import Box from "@mui/material/Box";
 function ProductList() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
@@ -49,9 +49,9 @@ function ProductList() {
 
   return (
     <div className='my-2' id='our-products'>
-      <Typography variant='h4'>Our Products:</Typography>
+      <Typography variant='h5'>Our Products:</Typography>
       {state.products.length ? (
-        <div className='flex-column'>
+        <Box>
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}
@@ -59,10 +59,10 @@ function ProductList() {
               image={product.image}
               name={product.name}
               price={product.price}
-              quantity={product.quantity}
+              description={product.description}
             />
           ))}
-        </div>
+        </Box>
       ) : (
         <Typography variant='h4'>
           You haven't added any products yet!

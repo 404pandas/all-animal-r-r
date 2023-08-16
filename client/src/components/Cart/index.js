@@ -77,9 +77,9 @@ export default function Cart() {
   return (
     <div className='cart'>
       <div className='close' onClick={toggleCart}>
-        [close]
+        [X]
       </div>
-      <Typography variant='h3'>Shopping Cart</Typography>
+      <Typography variant='h6'>Shopping Cart</Typography>
       {state.cart.length ? (
         <div>
           {state.cart.map((item) => (

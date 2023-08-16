@@ -17,7 +17,7 @@ import { idbPromise } from "../utils/helpers.js";
 // MUI imports
 import Typography from "@mui/material/Typography";
 
-function Detail() {
+function Profile() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const { id } = useParams();
@@ -123,4 +123,4 @@ function Detail() {
   );
 }
 
-export default Detail;
+export default Profile;

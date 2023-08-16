@@ -14,7 +14,6 @@ import Typography from "@mui/material/Typography/index.js";
 import Menu from "@mui/material/Menu/index.js";
 import Container from "@mui/material/Container/index.js";
 import Avatar from "@mui/material/Avatar/index.js";
-import Button from "@mui/material/Button/index.js";
 import Tooltip from "@mui/material/Tooltip/index.js";
 import MenuItem from "@mui/material/MenuItem/index.js";
 
@@ -27,7 +26,7 @@ const pagesHref = ["/about", "/contact", "/", "/projects", "/donate"];
 
 const settings = ["Profile", "Donation History", "Login", "Signup"];
 
-const settingsHref = ["/profile", "/donation-history", "/login", "/signup"];
+const settingsHref = ["/profile", "/donate-history", "/login", "/signup"];
 
 const user = [
   {
@@ -60,14 +59,12 @@ function Header() {
     setAnchorElUser(null);
   };
 
-  console.log(navigation);
-
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
         <div className='ifelse-header'>
-          <MenuItem key='OrderHistory' onClick={handleCloseNavMenu}>
-            <Link to='/orderHistory'>Order History</Link>
+          <MenuItem key='DonateHistory' onClick={handleCloseNavMenu}>
+            <Link to='/donate-history'>Donation History</Link>
           </MenuItem>
 
           {/* this is not using the Link component to logout or user and then refresh the application to the start */}
@@ -210,9 +207,9 @@ function Header() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Link to={settingsHref}>
+                {settings.map((setting, i) => (
+                  <MenuItem key={setting[i]} onClick={handleCloseUserMenu}>
+                    <Link to={settingsHref[i]}>
                       <Typography textAlign='center'>{setting}</Typography>
                     </Link>
                   </MenuItem>

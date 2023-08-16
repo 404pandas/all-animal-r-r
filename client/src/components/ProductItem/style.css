@@ -2,3 +2,20 @@
 *           Mary Elenius AAR&R Product Item Stylesheet          *
 *                         06/05/2023                            *
 \* -----------------------------------------------------------  */
+
+.donate-icons {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.product-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-names-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

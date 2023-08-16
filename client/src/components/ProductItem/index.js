@@ -2,16 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions.js";
-import { idbPromise, pluralize } from "../../utils/helpers.js";
+import { idbPromise } from "../../utils/helpers.js";
 
 // MUI import
 import Button from "@mui/material/Button";
+
+// local import
+import "./style.css";
+import Card from "@mui/material/Card";
+import { Typography } from "@mui/material";
 
 function ProductItem(item) {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
 
-  const { image, name, _id, price, quantity } = item;
+  const { image, name, _id, price, description } = item;
 
   const { cart } = state;
 
@@ -37,19 +42,17 @@ function ProductItem(item) {
   };
 
   return (
-    <div className='card px-1 py-1'>
-      <Link to={`/products/${_id}`}>
-        <img alt={name} src={`/images/${image}`} />
+    <Card className='product-cards'>
+      <Link to={`/products/${_id}`} className='product-names-icons'>
+        <img alt={name} src={`/images/${image}`} className='donate-icons' />
         <p>{name}</p>
       </Link>
       <div>
-        <div>
-          {quantity} {pluralize("item", quantity)} in stock
-        </div>
+        <Typography variant='body2'>{description}</Typography>
         <span>${price}</span>
       </div>
       <Button onClick={addToCart}>Add to cart</Button>
-    </div>
+    </Card>
   );
 }
 

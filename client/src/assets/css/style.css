@@ -612,6 +612,7 @@ h6 {
 #donation-container {
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 
 #product-list {
