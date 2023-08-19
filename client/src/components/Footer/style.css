@@ -16,6 +16,10 @@
   box-shadow: 0px -5px 10px 1px rgba(16, 16, 16, 0.05);
 }
 
+.left-details {
+  display: flex;
+}
+
 .footerContainer {
   display: flex;
   height: auto;

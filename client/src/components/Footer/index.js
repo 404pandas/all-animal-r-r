@@ -30,22 +30,29 @@ const Footer = () => {
             </Typography>
           </div>
           <div className='phone'>
-            <AiOutlinePhone
-              size={20}
-              style={{ color: "#d97777", marginRight: "2rem" }}
-            />
-            <Typography variant='body1' id='footer-body1'>
-              1 (772) 834 2342
-            </Typography>
+            <a href='tel:17728342342' className='left-details'>
+              <AiOutlinePhone
+                size={20}
+                style={{ color: "#d97777", marginRight: "2rem" }}
+              />
+              <Typography variant='body1' id='footer-body1'>
+                1 (772) 834 2342
+              </Typography>
+            </a>
           </div>
           <div className='email'>
-            <AiOutlineMail
-              size={20}
-              style={{ color: "#d97777", marginRight: "2rem" }}
-            />
-            <Typography variant='body1' id='footer-body1'>
-              mary.panda.jackson@gmail.com
-            </Typography>
+            <a
+              href='mailto:mary.panda.jackson@gmail.com'
+              className='left-details'
+            >
+              <AiOutlineMail
+                size={20}
+                style={{ color: "#d97777", marginRight: "2rem" }}
+              />
+              <Typography variant='body1' id='footer-body1'>
+                mary.panda.jackson@gmail.com
+              </Typography>
+            </a>
           </div>
         </div>
         <div className='rightFooter'>
