@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c9531a"
+  },
+  "firstName": "Mary",
+  "lastName": "Elenius",
+  "username": "AARR",
+  "email": "allanimalrr@gmail.com",
+  "password": "$2b$10$uZOu0rxYt6YkmNsJDenZgeWxjGkgueiXcdp1ishdhRDfY/kGtm5MG",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c9531c"
+  },
+  "firstName": "Jacob",
+  "lastName": "Elenius",
+  "username": "weissengheist",
+  "email": "exemplary.templar@gmail.com",
+  "password": "$2b$10$Ha61kiKANbmGVxvWW1NC8uHl1SG95677RsE3Y8hNcLQOTAldZyYTu",
+  "__v": 0
+}]

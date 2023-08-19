@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95303"
+  },
+  "name": "Donations",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95304"
+  },
+  "name": "Supplies for Rescue",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95305"
+  },
+  "name": "Adoptions",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95306"
+  },
+  "name": "Project Specific Donations",
+  "__v": 0
+}]

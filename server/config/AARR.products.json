@@ -1,0 +1,210 @@
+[{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95309"
+  },
+  "name": "$10 One-Time",
+  "description": "One time payment of $10",
+  "image": "donate-2.png",
+  "price": 10,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95303"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c9530a"
+  },
+  "name": "$10 Monthly",
+  "description": "Monthly payment of $10",
+  "image": "donate-3.png",
+  "price": 10,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95303"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c9530b"
+  },
+  "name": "$25 One-Time",
+  "description": "One time payment of $25",
+  "image": "donate-4.png",
+  "price": 25,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95303"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c9530c"
+  },
+  "name": "$25 Monthly",
+  "description": "Monthly payment of $25",
+  "image": "donate-5.png",
+  "price": 25,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95303"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c9530d"
+  },
+  "name": "$50 One-Time",
+  "description": "One time payment of $50",
+  "image": "donate-6.png",
+  "price": 50,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95303"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c9530e"
+  },
+  "name": "$50 Monthly",
+  "description": "Monthly payment of $50",
+  "image": "donate-7.png",
+  "price": 50,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95303"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c9530f"
+  },
+  "name": "$100 One-Time",
+  "description": "One time payment of $100",
+  "image": "donate-8.png",
+  "price": 100,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95303"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95310"
+  },
+  "name": "$100 Monthly",
+  "description": "Monthly payment of $100",
+  "image": "donate-9.png",
+  "price": 100,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95303"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95311"
+  },
+  "name": "Food",
+  "description": "Donations made under this category will go specifically to food for the animals in the rescue.",
+  "image": "donate-10.png",
+  "price": 25,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95304"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95312"
+  },
+  "name": "Treats",
+  "description": "Donations made under this category will go specifically to treats for the animals in the rescue.",
+  "image": "donate-11.png",
+  "price": 25,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95304"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95313"
+  },
+  "name": "Nail Clinic Supplies",
+  "description": "Donations made under this category will go specifically to supplies needed for free nail trim clinics.",
+  "image": "donate-12.png",
+  "price": 25,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95304"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95314"
+  },
+  "name": "Microchip Clinic Supplies",
+  "description": "Donations made under this category will go specifically to supplies needed for free microchip clinics.",
+  "image": "donate-13.png",
+  "price": 25,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95304"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95315"
+  },
+  "name": "Trap, Neuter, Release Supplies",
+  "description": "Donations made under this category will go specifically to supplies needed for the trap, neuter, release programs.",
+  "image": "donate-2.png",
+  "price": 25,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95304"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95316"
+  },
+  "name": "Adoption",
+  "description": "This donation only serves as a paper trail for adopters to possess when they adopt an animal in our care.",
+  "image": "donate-3.png",
+  "price": 10,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95305"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e0f244825bb8d655c95317"
+  },
+  "name": "The Artist Clowder",
+  "description": "These donations will specifically go toward the trap, neuter, release program currently in operation with the painter-themed stray cats. ",
+  "image": "donate-4.png",
+  "price": 25,
+  "quantity": 0,
+  "category": {
+    "$oid": "64e0f244825bb8d655c95306"
+  },
+  "__v": 0
+}]

@@ -14,7 +14,9 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography/index.js";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+const stripePromise = loadStripe(
+  "pk_live_51NG0W5DNP6iB0g80znscyWaz14cYRrEOoKKPDFX6exknvlZAzbEt4wfsAk2mjvEFC7JtHiSeprDRTuUCzUdX6ekX00trSmTbSW"
+);
 
 export default function Cart() {
   const dispatch = useDispatch();
