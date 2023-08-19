@@ -16,7 +16,7 @@ export const QUERY_PRODUCTS = gql`
 `;
 
 export const QUERY_USER = gql`
-  {
+  query User {
     user {
       firstName
       lastName

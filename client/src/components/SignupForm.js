@@ -4,11 +4,16 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations.js";
 
 import Auth from "../utils/auth.js";
+import { Form } from "react-router-dom";
+import Alert from "@mui/material/Alert";
+import Button from "@mui/material/Button";
 
 const SignupForm = () => {
   // set initial form state
   const [userFormData, setUserFormData] = useState({
     username: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
   });
@@ -54,6 +59,8 @@ const SignupForm = () => {
 
     setUserFormData({
       username: "",
+      firstName: "",
+      lastName: "",
       email: "",
       password: "",
     });
@@ -89,6 +96,33 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group>
+          <Form.Label htmlFor='firstName'>First Name</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Your firstname'
+            name='firstName'
+            onChange={handleInputChange}
+            value={userFormData.firstName}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>
+            First name is required!
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='lastName'>Last name</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Your lastName'
+            name='lastName'
+            onChange={handleInputChange}
+            value={userFormData.lastName}
+            required
+          />
+        </Form.Group>
+
+        <Form.Group>
           <Form.Label htmlFor='email'>Email</Form.Label>
           <Form.Control
             type='email'
@@ -121,6 +155,8 @@ const SignupForm = () => {
           disabled={
             !(
               userFormData.username &&
+              userFormData.firstName &&
+              userFormData.lastName &&
               userFormData.email &&
               userFormData.password
             )

@@ -11,7 +11,7 @@ import {
   ADD_TO_CART,
   UPDATE_PRODUCTS,
 } from "../utils/actions.js";
-import { QUERY_PRODUCTS } from "../utils/queries.js";
+import { QUERY_PRODUCTS, QUERY_USER } from "../utils/queries.js";
 import { idbPromise } from "../utils/helpers.js";
 
 // MUI imports
@@ -25,7 +25,8 @@ function Profile() {
   const [currentProduct, setCurrentProduct] = useState({});
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-
+  const { dataUser } = useQuery(QUERY_USER);
+  const userData = dataUser?.user || {};
   const { products, cart } = state;
 
   useEffect(() => {
@@ -84,10 +85,14 @@ function Profile() {
 
     idbPromise("cart", "delete", { ...currentProduct });
   };
-
+  console.log(currentProduct);
   return (
     <>
-    <Typography variant="h4">Welcome, </Typography>
+      {userData ? (
+        <>
+          <Typography variant='h4'>Welcome, {userData.firstName}</Typography>
+        </>
+      ) : null}
       {currentProduct && cart ? (
         <div className='container my-1' id='cart-list'>
           <Link to='/donate'>← Back to Donation Options</Link>
@@ -110,15 +115,13 @@ function Profile() {
               </button>
             </div>
           </Typography>
-
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-            id='currentProductImage'
-          />
         </div>
       ) : null}
       {loading ? <PawprintSpinner /> : null}
+      <Typography variant='body1'>
+        This will be home to user data. This user data will be used for a Search
+        & Rescue app that is currently being developed.
+      </Typography>
       <Cart />
     </>
   );

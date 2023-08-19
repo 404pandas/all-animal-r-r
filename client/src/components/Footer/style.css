@@ -1,6 +1,13 @@
-.footer {
+:root {
+  --logo-red: #8c0303;
+  --off-white: #d9bfa0;
+  --darker-shade: #a68263;
+  --darkest-shade: #8c583a;
+}
+
+#footer {
   width: 100%;
-  background-color: var(--tan);
+  background-color: var(--darker-shade);
   z-index: 50;
   position: fixed;
   left: 0;
@@ -21,11 +28,11 @@
   padding: 1rem;
   justify-content: center;
   width: 30vw;
-  align-items: center;
 }
 
 .leftFooter p {
   line-height: 2rem;
+  color: white;
 }
 
 .rightFooter {
@@ -74,7 +81,8 @@
   flex-direction: column;
 }
 
-.footer {
+svg {
+  color: var(--logo-red) !important;
 }
 
 /* ****************************** */
