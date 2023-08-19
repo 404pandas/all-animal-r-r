@@ -6,7 +6,7 @@ import { idbPromise } from "../../utils/helpers.js";
 // MUI imports
 import TextField from "@mui/material/TextField";
 
-export default function CartItem({ item }) {
+const CartItem = ({ item }) => {
   const [, dispatch] = useStoreContext();
 
   const removeFromCart = (item) => {
@@ -60,4 +60,4 @@ export default function CartItem({ item }) {
       </div>
     </div>
   );
-}
+};

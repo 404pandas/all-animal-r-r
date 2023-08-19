@@ -14,9 +14,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography/index.js";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
-const stripePromise = loadStripe(
-  "pk_live_51MDKvIJZnzwMvaJyfu0rmAsM9ApoKwmP8MKPQZkdfn7zUJIGuU7SDdvocUoUOhaxefHIggSn6FhrTYJGsyjqxgrS00j3TAH3d1"
-);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_SECRET_KEY);
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
@@ -99,9 +97,6 @@ const Cart = () => {
         </div>
       ) : (
         <Typography variant='h4'>
-          <span role='img' aria-label='shocked'>
-            😱
-          </span>
           You haven't added anything to your cart yet!
         </Typography>
       )}
