@@ -20,9 +20,23 @@ import MenuItem from "@mui/material/MenuItem/index.js";
 // MUI Icons
 import MenuIcon from "@mui/icons-material/Menu.js";
 
-const pages = ["About", "Contact", "Home", "Projects", "Donate"];
+const pages = [
+  "Home",
+  "About",
+  "Projects",
+  "Donate",
+  "Contact",
+  "Donations & Expenses",
+];
 
-const pagesHref = ["/about", "/contact", "/", "/projects", "/donate"];
+const pagesHref = [
+  "/",
+  "/about",
+  "/projects",
+  "/donate",
+  "/contact",
+  "/donations",
+];
 
 const settings = ["Profile", "Donation History", "Login", "Signup"];
 
@@ -144,7 +158,9 @@ function Header() {
                     <Link to={pagesHref[i]}>
                       <Typography
                         textAlign='center'
-                        color={pagesHref[i] === pathname ? "black" : "pink"}
+                        color={
+                          pagesHref[i] === pathname ? "#8c0303" : "#d9bfa0"
+                        }
                       >
                         {page}
                       </Typography>
@@ -178,7 +194,7 @@ function Header() {
                 <Link to={pagesHref[i]}>
                   <Typography
                     textAlign='center'
-                    color={pagesHref[i] === pathname ? "black" : "pink"}
+                    color={pagesHref[i] === pathname ? "#8c0303" : "white"}
                   >
                     {page}
                   </Typography>

@@ -1,8 +1,8 @@
 .cardContainer img {
   min-width: 100%;
   max-width: 100%;
-  min-height: 230px;
-  max-height: 230px;
+  min-height: 325px;
+  max-height: 325px;
   position: relative;
   top: 0px;
   align-self: center;
@@ -26,4 +26,19 @@
 #details {
   display: flex;
   flex-direction: column;
+}
+
+/* 
+MUI breakpoints
+---------------
+small: 600px
+medium: 900px
+large: 1200px */
+
+@media screen and (max-width: 900px) {
+  #projectCardContainer {
+    width: 80% !important;
+    flex-direction: column;
+    margin: auto;
+  }
 }

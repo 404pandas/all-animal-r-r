@@ -11,8 +11,6 @@
 * ELEMENTS
   ## Body
 
-* FLEXBOX
-
 * TYPOGRAPHY 
   ## Text wrap
   ## Font Family
@@ -39,7 +37,6 @@
 *                     Universal & Variables                      *
 \* -----------------------------------------------------------  */
 
-/*  Universal selector to remove padding & margin and set box-sizing */
 *,
 *:before,
 *:after {
@@ -48,22 +45,34 @@
   box-sizing: border-box;
 }
 
-/*     Universal selector to remove text decoration from li and a    */
 li,
 a {
   text-decoration: none;
+}
+
+button {
+  color: var(--logo-red) !important;
 }
 
 /* ----------------      Color Variables       ---------------- */
 
 /*       Color variables for easy selection throughout CSS      */
 :root {
-  --light-green: #606c38;
-  --dark-green: #283618;
-  --off-white: #fefae0;
-  --light-orange: #dda15e;
-  --dark-orange: #bc6c25;
+  --logo-red: #8c0303;
+  --off-white: #d9bfa0;
+  --darker-shade: #a68263;
+  --darkest-shade: #8c583a;
 }
+
+header {
+  background-color: var(--darker-shade) !important;
+}
+
+/* #A60311
+#D9BFA0
+#A68263
+#8C583A
+#730202 */
 
 /* ============================================================ *\
 *                           Elements                             *
@@ -77,7 +86,7 @@ body {
 }
 
 a {
-  color: var(--light-orange);
+  color: var(--logo-red);
 }
 
 /* ============================================================ *\
@@ -249,11 +258,6 @@ img#codedLogo {
   max-width: 50px;
 }
 
-/*     Class selector to set the width of the copiable text     */
-#copiedText {
-  width: fit-content;
-}
-
 .card-content {
   display: flex;
   height: 4rem;
@@ -262,12 +266,6 @@ img#codedLogo {
 
 span.card-title {
   size: 1rem !important;
-}
-
-@media only screen and (min-width: 601px) {
-  .row .col.m6 {
-    width: 100%;
-  }
 }
 
 /* -------------------       Button       --------------------- */
@@ -296,130 +294,6 @@ input[type="submit"] {
   height: 36px;
 }
 
-/* -----------------       Family Tree       ------------------ */
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.tree ul {
-  padding-top: 20px;
-  position: relative;
-
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-}
-
-.tree li {
-  float: left;
-  text-align: center;
-  list-style-type: none;
-  position: relative;
-  padding: 20px 5px 0 5px;
-
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-}
-
-/*       Class selector to create lines before and after        */
-.tree li::before,
-.tree li::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 50%;
-  border-top: 1px solid var(--dark-green);
-  width: 50%;
-  height: 20px;
-}
-.tree li::after {
-  right: auto;
-  left: 50%;
-  border-left: 1px solid var(--dark-green);
-}
-
-/*       Class selector to remove lines for only child       */
-.tree li:only-child::after,
-.tree li:only-child::before {
-  display: none;
-}
-
-/*       Class selector to remove top for only child        */
-.tree li:only-child {
-  padding-top: 0;
-}
-
-/* Class selector to remove left & right of first & last child */
-.tree li:first-child::before,
-.tree li:last-child::after {
-  border: 0 none;
-}
-
-/*       Class selector to recreate verticle line        */
-.tree li:last-child::before {
-  border-right: 1px solid var(--dark-green);
-  border-radius: 0 5px 0 0;
-  -webkit-border-radius: 0 5px 0 0;
-  -moz-border-radius: 0 5px 0 0;
-}
-.tree li:first-child::after {
-  border-radius: 5px 0 0 0;
-  -webkit-border-radius: 5px 0 0 0;
-  -moz-border-radius: 5px 0 0 0;
-}
-
-/*       Class selector to create downward lines        */
-.tree ul ul::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  border-left: 1px solid var(--dark-green);
-  width: 0;
-  height: 20px;
-}
-
-.tree li a {
-  border: 1px solid var(--dark-green);
-  padding: 5px 10px;
-  text-decoration: none;
-  color: var(--dark-green);
-  font-family: arial, verdana, tahoma;
-  font-size: 11px;
-  display: inline-block;
-
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-}
-
-.childrenRow {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.card-content {
-  max-width: 100px;
-  height: auto;
-}
-
-.parentNode {
-  margin: auto;
-}
-
-.treeContainer1,
-.treeContainer2 {
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 /* -------------------       Footer       --------------------- */
 
 /* ----------------       Material Icon       ----------------- */
@@ -437,6 +311,120 @@ input[type="submit"] {
 /*           Class slector to remove margin on icons            */
 i.no-margin {
   margin-right: 0px !important;
+}
+
+/* ============================================================ *\
+*                            Pages                               *
+\* -----------------------------------------------------------  */
+/* --------------------       About       --------------------- */
+#about-body {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+#about-content p {
+  display: flex;
+}
+#contact-body {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+#donate-history-body {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+/* lol */
+#home-body {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+#welcome {
+  text-align: center;
+}
+
+#dear {
+  text-align: justify;
+}
+
+#home-text {
+  text-align: justify;
+  text-indent: 5%;
+}
+#login-body {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+#noMatchContainer {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+#profile-body {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+#donate-body {
+  margin: auto;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  display: flex;
+  justify-content: center;
+}
+
+.stepper {
+  background-color: transparent !important;
+}
+
+#projects-body {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+#signup-body {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+#success-body {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.title {
+  background-color: transparent;
+}
+
+.css-26w9jf-MuiMobileStepper-dot {
+  background-color: var(--logo-red) !important;
+}
+
+.title p {
+  margin-top: 10px;
+}
+
+.step-label {
+  margin-top: 40px;
+}
+/* --------------------       Home       ---------------------- */
+#homepage-picture {
+  width: 20%;
+  align-self: center;
 }
 
 /* ============================================================ *\
@@ -596,8 +584,8 @@ h6 {
 }
 
 #image404page {
-  width: 50%;
-  border-radius: 80px;
+  width: 150px;
+  border-radius: 25px;
 }
 
 #noMatchContainer {
@@ -605,7 +593,6 @@ h6 {
   flex-direction: column;
   align-items: center;
   margin-top: 5%;
-  background-color: white;
   padding: 3%;
 }
 
@@ -613,6 +600,8 @@ h6 {
   display: flex;
   flex-direction: column;
   width: 80%;
+  margin: auto;
+  margin-top: 10px;
 }
 
 #product-list {
@@ -641,4 +630,15 @@ h6 {
 }
 #logo {
   width: 3rem;
+}
+
+#donate-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cat-gif {
+  width: 300px;
+  border-radius: 300px;
 }

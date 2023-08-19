@@ -1,15 +1,19 @@
 import React, { useEffect } from "react";
-import ProductItem from "../ProductItem/index.js";
+
+// external imports
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import { useDispatch, useSelector } from "react-redux";
-import { UPDATE_PRODUCTS } from "../../utils/actions.js";
 import { useQuery } from "@apollo/client";
+
+// local imports
 import { QUERY_PRODUCTS } from "../../utils/queries.js";
 import { idbPromise } from "../../utils/helpers.js";
 import PawprintSpinner from "../Spinner/index.js";
+import ProductItem from "../ProductItem/index.js";
+import { UPDATE_PRODUCTS } from "../../utils/actions.js";
+import "./style.css";
 
-// MUI imports
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 function ProductList() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
@@ -49,9 +53,8 @@ function ProductList() {
 
   return (
     <div className='my-2' id='our-products'>
-      <Typography variant='h5'>Our Products:</Typography>
       {state.products.length ? (
-        <Box>
+        <Box id='products-flex'>
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}

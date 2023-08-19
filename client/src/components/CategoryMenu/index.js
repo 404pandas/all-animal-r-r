@@ -8,6 +8,8 @@ import {
 import { QUERY_CATEGORIES } from "../../utils/queries.js";
 import { idbPromise } from "../../utils/helpers.js";
 
+import "./style.css";
+
 // MUI imports
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography/index.js";
@@ -47,8 +49,8 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
-      <Typography variant='h4'>Choose a Category:</Typography>
+    <div id='category-menu'>
+      <Typography variant='h5'>Categories:</Typography>
       {categories.map((item) => (
         <Button
           key={item._id}

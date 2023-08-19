@@ -9,9 +9,11 @@ import {
   AiOutlinePhone,
   AiOutlineMail,
   AiOutlineLinkedin,
-  AiOutlineShareAlt,
   AiOutlineGithub,
 } from "react-icons/ai";
+
+import { FiExternalLink } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -48,18 +50,24 @@ const Footer = () => {
         </div>
         <div className='rightFooter'>
           <div className='socialIcons'>
-            <AiOutlineLinkedin
-              size={20}
-              style={{ color: "#d97777", marginRight: "2rem" }}
-            />
-            <AiOutlineShareAlt
-              size={20}
-              style={{ color: "#d97777", marginRight: "2rem" }}
-            />
-            <AiOutlineGithub
-              size={20}
-              style={{ color: "#d97777", marginRight: "2rem" }}
-            />
+            <Link to={`https://www.linkedin.com/in/404pandas`}>
+              <AiOutlineLinkedin
+                size={20}
+                style={{ color: "#d97777", marginRight: "2rem" }}
+              />
+            </Link>
+            <Link to={`https://www.maryelenius.com`}>
+              <FiExternalLink
+                size={20}
+                style={{ color: "#d97777", marginRight: "2rem" }}
+              />
+            </Link>
+            <Link to={`https://www.github.com/404pandas`}>
+              <AiOutlineGithub
+                size={20}
+                style={{ color: "#d97777", marginRight: "2rem" }}
+              />
+            </Link>
           </div>
         </div>
       </div>

@@ -2,3 +2,17 @@
 *          Mary Elenius AAR&R Category Menu Stylesheet          *
 *                         06/05/2023                            *
 \* -----------------------------------------------------------  */
+
+/* 
+MUI breakpoints
+---------------
+small: 600px
+medium: 900px
+large: 1200px */
+
+@media screen and (max-width: 900px) {
+  #category-menu {
+    display: flex;
+    flex-direction: column;
+  }
+}

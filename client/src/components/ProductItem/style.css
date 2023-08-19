@@ -12,10 +12,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 30%;
+  justify-content: space-between;
+}
+
+.product-cards a + div + button {
+  margin-top: 5px;
 }
 
 .product-names-icons {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.product-names-icons img + p {
+  margin-top: 5px;
+}
+
+.price {
+  position: relative;
+  left: -43%;
+}
+
+/* 
+MUI breakpoints
+---------------
+small: 600px
+medium: 900px
+large: 1200px */
+
+@media screen and (max-width: 900px) {
+  .product-cards {
+    width: 80% !important;
+  }
 }

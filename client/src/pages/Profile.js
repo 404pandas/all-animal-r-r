@@ -87,6 +87,7 @@ function Profile() {
 
   return (
     <>
+    <Typography variant="h4">Welcome, </Typography>
       {currentProduct && cart ? (
         <div className='container my-1' id='cart-list'>
           <Link to='/donate'>← Back to Donation Options</Link>

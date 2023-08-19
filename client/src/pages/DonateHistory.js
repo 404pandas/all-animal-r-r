@@ -1,13 +1,13 @@
-// package imports
 import React from "react";
-import { Link } from "react-router-dom";
-import { useQuery } from "@apollo/client";
 
 // Local imports
 import { QUERY_USER } from "../utils/queries.js";
+import catGif from "../assets/images/donate-history-cats.gif";
 
-// MUI imports
+// External imports
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
+import { useQuery } from "@apollo/client";
 
 function DonateHistory() {
   const { data } = useQuery(QUERY_USER);
@@ -19,8 +19,8 @@ function DonateHistory() {
 
   return (
     <>
-      <div className='container my-1'>
-        <Link to='/'>← Back to Products</Link>
+      <div id='donate-history-body'>
+        <Link to='/donate'>← Donation Options</Link>
 
         {user ? (
           <>
@@ -48,7 +48,17 @@ function DonateHistory() {
               </div>
             ))}
           </>
-        ) : null}
+        ) : (
+          <div id='donate-error'>
+            <img src={catGif} alt='alternating cats' id='cat-gif'></img>
+            <Typography variant='h6'>
+              This page is intentionally empty.
+            </Typography>
+            <Typography variant='h6'>
+              You do not have a donation history.
+            </Typography>
+          </div>
+        )}
       </div>
     </>
   );

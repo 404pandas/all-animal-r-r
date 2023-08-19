@@ -47,7 +47,7 @@ function ContactForm() {
 
   return (
     <div>
-      <Typography variant='h3'>Contact Me:</Typography>
+      <Typography variant='h5'>Contact Me:</Typography>
       <div id='contact-form' onSubmit={handleSubmit}>
         <TextField
           required

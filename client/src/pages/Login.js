@@ -34,7 +34,7 @@ function Login(props) {
   };
 
   return (
-    <Container>
+    <Container id='login-body'>
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
         <div className='my-2 input-fill'>

@@ -43,13 +43,15 @@ function ProductItem(item) {
 
   return (
     <Card className='product-cards'>
+      <div className='price'>
+        <span>${price}</span>{" "}
+      </div>
       <Link to={`/products/${_id}`} className='product-names-icons'>
         <img alt={name} src={`/images/${image}`} className='donate-icons' />
         <p>{name}</p>
       </Link>
       <div>
         <Typography variant='body2'>{description}</Typography>
-        <span>${price}</span>
       </div>
       <Button onClick={addToCart}>Add to cart</Button>
     </Card>

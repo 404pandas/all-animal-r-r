@@ -22,6 +22,7 @@ import Projects from "./pages/Projects.js";
 import Signup from "./pages/Signup.js";
 import Success from "./pages/Success.js";
 import Profile from "./pages/Profile.js";
+import DonateList from "./pages/DonateList.js";
 
 // Components
 import Header from "./components/Header";
@@ -67,6 +68,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/success' element={<Success />} />
             <Route path='/contact' element={<Contact />} />
+            <Route path='/donations' element={<DonateList />} />
             <Route path='*' element={<NoMatch />} />
             <Route path='/profile' element={<Profile />} />
           </Routes>

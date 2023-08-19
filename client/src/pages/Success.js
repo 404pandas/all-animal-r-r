@@ -33,9 +33,9 @@ function Success() {
 
   return (
     <div>
-      <Typography variaant='h1'>Success!</Typography>
-      <Typography variant='h2'>Thank you for your purchase!</Typography>
-      <Typography variable='h2'>
+      <Typography variaant='h4'>Success!</Typography>
+      <Typography variant='h5'>Thank you for your donation!</Typography>
+      <Typography variable='h5'>
         You will now be redirected to the home page
       </Typography>
     </div>
