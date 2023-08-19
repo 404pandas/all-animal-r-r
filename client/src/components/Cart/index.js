@@ -14,10 +14,9 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography/index.js";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_SECRET_KEY);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const Cart = () => {
-  console.log("variable=" + process.env.REACT_APP_STRIPE_SECRET_KEY);
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
