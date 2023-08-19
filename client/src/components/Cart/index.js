@@ -15,7 +15,7 @@ import Typography from "@mui/material/Typography/index.js";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 const stripePromise = loadStripe(
-  "pk_live_51NG0W5DNP6iB0g80znscyWaz14cYRrEOoKKPDFX6exknvlZAzbEt4wfsAk2mjvEFC7JtHiSeprDRTuUCzUdX6ekX00trSmTbSW"
+  "pk_live_51MDKvIJZnzwMvaJyfu0rmAsM9ApoKwmP8MKPQZkdfn7zUJIGuU7SDdvocUoUOhaxefHIggSn6FhrTYJGsyjqxgrS00j3TAH3d1"
 );
 
 export default function Cart() {
