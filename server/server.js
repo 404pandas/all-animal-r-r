@@ -3,7 +3,8 @@ const { ApolloServer } = require("apollo-server-express");
 const { ApolloServerPluginInlineTrace } = require("apollo-server-core");
 const path = require("path");
 const { authMiddleware } = require("./utils/auth.js");
-
+const dotenv = require("dotenv");
+dotenv.config();
 const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection.js");
 

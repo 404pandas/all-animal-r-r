@@ -17,6 +17,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_SECRET_KEY);
 
 const Cart = () => {
+  console.log("variable=" + process.env.REACT_APP_STRIPE_SECRET_KEY);
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
