@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions.js";
 import { idbPromise } from "../../utils/helpers.js";
 
@@ -7,7 +7,7 @@ import { idbPromise } from "../../utils/helpers.js";
 import TextField from "@mui/material/TextField";
 
 export default function CartItem({ item }) {
-  const dispatch = useDispatch();
+  const [, dispatch] = useStoreContext();
 
   const removeFromCart = (item) => {
     dispatch({

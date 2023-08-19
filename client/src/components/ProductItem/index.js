@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions.js";
 import { idbPromise } from "../../utils/helpers.js";
 
@@ -13,8 +13,7 @@ import Card from "@mui/material/Card";
 import { Typography } from "@mui/material";
 
 function ProductItem(item) {
-  const dispatch = useDispatch();
-  const state = useSelector((state) => state);
+  const [state, dispatch] = useStoreContext();
 
   const { image, name, _id, price, description } = item;
 
@@ -46,10 +45,8 @@ function ProductItem(item) {
       <div className='price'>
         <span>${price}</span>{" "}
       </div>
-      <Link to={`/products/${_id}`} className='product-names-icons'>
-        <img alt={name} src={`/images/${image}`} className='donate-icons' />
-        <p>{name}</p>
-      </Link>
+      <img alt={name} src={`/images/${image}`} className='donate-icons' />
+      <p>{name}</p>
       <div>
         <Typography variant='body2'>{description}</Typography>
       </div>

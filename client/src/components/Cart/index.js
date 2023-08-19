@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
-import { QUERY_CHECKOUT } from "../../utils/queries.js";
-import { idbPromise } from "../../utils/helpers.js";
-import CartItem from "../CartItem/index.js";
-import Auth from "../../utils/auth.js";
-import { useDispatch, useSelector } from "react-redux";
-import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions.js";
+import { QUERY_CHECKOUT } from "../../utils/queries";
+import { idbPromise } from "../../utils/helpers";
+import CartItem from "../CartItem";
+import Auth from "../../utils/auth";
+import { useStoreContext } from "../../utils/GlobalState";
+import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import "./style.css";
 
 // MUI imports
@@ -18,9 +18,8 @@ const stripePromise = loadStripe(
   "pk_live_51MDKvIJZnzwMvaJyfu0rmAsM9ApoKwmP8MKPQZkdfn7zUJIGuU7SDdvocUoUOhaxefHIggSn6FhrTYJGsyjqxgrS00j3TAH3d1"
 );
 
-export default function Cart() {
-  const dispatch = useDispatch();
-  const state = useSelector((state) => state);
+const Cart = () => {
+  const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
   useEffect(() => {
@@ -108,4 +107,6 @@ export default function Cart() {
       )}
     </div>
   );
-}
+};
+
+export default Cart;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { useDispatch, useSelector } from "react-redux";
+import { useStoreContext } from "../utils/GlobalState";
 
 import Cart from "../components/Cart/index.js";
 import PawprintSpinner from "../components/Spinner/index.js";
@@ -18,8 +18,8 @@ import { idbPromise } from "../utils/helpers.js";
 import Typography from "@mui/material/Typography";
 
 function Profile() {
-  const dispatch = useDispatch();
-  const state = useSelector((state) => state);
+  const [state, dispatch] = useStoreContext();
+
   const { id } = useParams();
 
   const [currentProduct, setCurrentProduct] = useState({});
@@ -85,7 +85,6 @@ function Profile() {
 
     idbPromise("cart", "delete", { ...currentProduct });
   };
-  console.log(currentProduct);
   return (
     <>
       {userData ? (

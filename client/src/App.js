@@ -7,8 +7,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context/index.js";
-import { Provider } from "react-redux";
-import store from "./utils/store.js";
+import { StoreProvider } from "./utils/GlobalState";
 
 // Pages
 import About from "./pages/About.js";
@@ -56,7 +55,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Provider store={store}>
+        <StoreProvider>
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
@@ -73,7 +72,7 @@ function App() {
             <Route path='/profile' element={<Profile />} />
           </Routes>
           <Footer />
-        </Provider>
+        </StoreProvider>
       </Router>
     </ApolloProvider>
   );

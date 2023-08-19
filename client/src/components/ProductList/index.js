@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 // external imports
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { useDispatch, useSelector } from "react-redux";
+import { useStoreContext } from "../../utils/GlobalState";
 import { useQuery } from "@apollo/client";
 
 // local imports
@@ -15,8 +15,7 @@ import { UPDATE_PRODUCTS } from "../../utils/actions.js";
 import "./style.css";
 
 function ProductList() {
-  const dispatch = useDispatch();
-  const state = useSelector((state) => state);
+  const [state, dispatch] = useStoreContext();
 
   const { currentCategory } = state;
 
