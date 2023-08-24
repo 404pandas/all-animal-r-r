@@ -22,6 +22,7 @@ import Signup from "./pages/Signup.js";
 import Success from "./pages/Success.js";
 import Profile from "./pages/Profile.js";
 import DonateList from "./pages/DonateList.js";
+import Playground from "./pages/Playground";
 
 // Components
 import Header from "./components/Header";
@@ -70,6 +71,7 @@ function App() {
             <Route path='/donations' element={<DonateList />} />
             <Route path='*' element={<NoMatch />} />
             <Route path='/profile' element={<Profile />} />
+            <Route path='/playground' element={<Playground />} />
           </Routes>
           <Footer />
         </StoreProvider>
