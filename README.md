@@ -146,7 +146,7 @@ See LICENSE.txt for more information.
 
 Mary Elenius - mary.panda.jackson@gmail.com
 
-Project Link: [https://allanimalrr.netlify.app](https://allanimalrr.netlify.app)
+Project Link: [https://www.allanimalrr.org](https://allanimalrr.netlify.app)
 
 <!-- ACKNOWLEDGMENTS -->
 
